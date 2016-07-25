@@ -17,13 +17,16 @@
 <manifest package="com.richie.axles"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <original-package android:name="com.axles"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name="com.axles.AxleApplication"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AxleFunctionsActivity">
+        <activity android:name="com.axles.activities.AxleFunctionsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

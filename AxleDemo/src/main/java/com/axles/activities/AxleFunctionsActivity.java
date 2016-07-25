@@ -13,18 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.richie.axles;
+package com.axles.activities;
 
-import org.junit.Test;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-import static org.junit.Assert.*;
+import com.axle.BaseApplication;
+import com.richie.axles.R;
 
 /**
- * To work on unit tests, switch the Test Artifact in the Build Variants view.
+ * Axle功能列表(包含已支持和未支持)
+ * @author richie (richie1990@163.com)
  */
-public class ExampleUnitTest{
-    @Test
-    public void addition_isCorrect() throws Exception{
-        assertEquals(4, 2 + 2);
+public class AxleFunctionsActivity extends AppCompatActivity{
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_axle_functions);
+
+        BaseApplication.getInstance();
     }
 }

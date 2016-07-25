@@ -13,16 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.richie.axles;
+package com.axles;
 
-import android.app.Application;
-import android.test.ApplicationTestCase;
+import com.axle.BaseApplication;
+import com.axle.utils.LogUtil;
 
 /**
- * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
+ *
+ * @author richie (richie1990@163.com)
  */
-public class ApplicationTest extends ApplicationTestCase<Application>{
-    public ApplicationTest(){
-        super(Application.class);
+public class AxleApplication extends BaseApplication{
+
+    @Override
+    public void onCreate(){
+        super.onCreate();
+    }
+
+    @Override
+    public void doException(Thread thread, Throwable ex){
+        LogUtil.e(true, "捕捉全局异常", "", ex);
     }
 }

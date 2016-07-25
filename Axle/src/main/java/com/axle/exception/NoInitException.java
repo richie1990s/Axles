@@ -13,20 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.richie.axles;
-
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+package com.axle.exception;
 
 /**
- * Axle功能列表(包含已支持和未支持)
+ * 在使用某些类的时候没有初始化
  * @author richie (richie1990@163.com)
  */
-public class AxleFunctionsActivity extends AppCompatActivity{
+public class NoInitException extends RuntimeException{
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_axle_functions);
+    public NoInitException(String message){
+        super(message);
     }
 }

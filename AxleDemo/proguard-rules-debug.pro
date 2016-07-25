@@ -46,27 +46,6 @@
 #如果引用了v4或者v7包
 -dontwarn android.support.**
 
-#####移除不必要的类(主要是Log输出类)#####
-#移除LogUtil
--assumenosideeffects class com.axle.utils.LogUtil {
-    public static void v(...);
-    public static void i(...);
-    public static void w(...);
-    public static void d(...);
-    public static void e(...);
-    public static int println(...);
-}
-#移除Log
--assumenosideeffects class android.util.Log {
-    public static boolean isLoggable(java.lang.String, int);
-    public static int v(...);
-    public static int i(...);
-    public static int w(...);
-    public static int d(...);
-    public static int e(...);
-}
-#####移除不必要的类(主要是Log输出类)  END#####
-
 -keep public class * extends android.view.View {
     public <init>(android.content.Context);
     public <init>(android.content.Context, android.util.AttributeSet);
